@@ -1,0 +1,156 @@
+html { /*necessary to make the footer element stick to the bottom at all times*/
+  position:relative;
+  min-height:100%;
+}
+
+.jumbotron {
+  background: url('http://freenaturestock.s3.amazonaws.com/166.jpg')center center;
+  background-size: 100% 100%;
+  /*use background-size: 100% 100%; instead of using background-size:cover; to have the image properly adjusted at all times instead of just after certain breaking points*/
+  height: 600px;
+
+  /*
+  if you wanted to use height:100%; remember that you have to give the same properties to the parent elements before applying it to the jumbotron(in this case) .. so
+  body{
+    height:100%;
+    min-height:100%;
+  }
+  is also necessary for using jumbotron{height:100%;}
+  */
+
+  /*
+  if you wanted to have the jumbotron be full width AND height of the screen, but also allow stuff beneath it if you scroll:
+
+  height:100vh;
+
+  */
+  /*
+  if you wanted the jumbotron to cover the entire page
+  (EVERYTHING)
+  http://stackoverflow.com/questions/16548338/full-screen-responsive-background-image/19459998#19459998
+
+  min-height:100%;width:100%;
+  height:100%;position:fixed;
+*/
+}
+
+.logo{
+  width:95px;
+  height:95px;
+/*  margin-left:15px;*/
+}
+
+.featured{
+  color:aliceblue;
+  padding-top:65px;
+}
+
+.featured .btn-default{
+  background-color:rgba(145, 32, 58, 0.5);
+  font-weight: bold;
+  color:aliceblue;
+  border-radius:8px;
+  margin-top:25px;
+  margin-right:20px;
+  width:170px;
+}
+
+.featured .btn-default:hover {
+  background-color:rgba(145, 32, 58, 0.8);
+}
+
+.trial{
+  text-align:center;
+  padding:20px 0px 40px 0px;
+  color:black;
+}
+
+.trial img{
+  height:70px;
+  width:200px;
+  margin:20px;
+}
+
+.trial img:hover{
+  cursor:pointer;
+}
+
+.footer{
+  background-color:#eee;
+  font-size:15px;
+  padding:10px 0;
+  text-align:right;
+
+/*styling necessary to make the element of class .footer stick to the bottom at all times*/
+  position:absolute;
+  bottom:0;
+  width:100%;
+
+}
+
+
+/* between 480px and 768px */
+@media (min-width: 515px) and (max-width: 768px) {
+  .jumbotron {
+    height: 410px;
+    margin: 0;
+  }
+
+  .logo {
+    width:50px;
+    height:50px;
+    margin-left:15px;
+  }
+
+  .featured {
+    padding-top:25px;
+    text-align:center;
+  }
+
+  .featured p {
+    font-size:17px;
+  }
+
+/*
+  .footer{
+    position:absolute;
+    bottom:0;margin:0;width:100%;
+  }
+*/
+}
+
+/*under 480px*/
+@media (max-width: 515px) {
+  .jumbotron {
+    height: 420px;
+    margin: 0;
+  }
+
+  .logo {
+    width:40px;
+    height:40px;
+    margin-left:15px;
+  }
+
+  .featured {
+    padding-top:10px;
+    text-align:center;
+  }
+
+  .featured p, .featured a {
+    font-size:13px;
+  }
+
+  .trial img {
+    width:100px;
+    height:35px;
+    margin:10px;
+  }
+
+/*
+  .footer{
+    position:absolute;
+    bottom:0;width:100%;
+  }
+*/
+}
