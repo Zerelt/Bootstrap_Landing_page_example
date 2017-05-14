@@ -4,7 +4,7 @@ html { /*necessary to make the footer element stick to the bottom at all times*/
 }
 
 .jumbotron {
-  background: url('http://freenaturestock.s3.amazonaws.com/166.jpg')center center;
+  background: url('./images/166_b.jpg')center center;
   background-size: 100% 100%;
   /*use background-size: 100% 100%; instead of using background-size:cover; to have the image properly adjusted at all times instead of just after certain breaking points*/
   height: 600px;
